@@ -1,0 +1,329 @@
+/* App Theme */
+:root {
+  --blue:  #232370;
+  --bg-accent: #484a4d;
+  --text-color: #dadce1;
+  --nav-size: 60px;
+  --border: 1px solid #474a4d;
+  --border-radius: 3vw;
+  --speed: 500ms;
+  --page-width: 60%;
+  --title-font: bold 3vw 'Lato', sans-serif;
+}
+
+p,
+li {
+  font: 1.5vw 'Raleway', sans-serif;
+}
+
+h1 {
+  font: bold 3vw 'Lato', sans-serif;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+h2 {
+  font: bold 2.3vw 'Lato', sans-serif;
+  padding-top:2vw;
+
+}
+
+p a {
+  color: black;
+  transition: all  var(--speed) ease;
+}
+p a:hover {
+  color: white;
+  background-color:var(--blue);
+}
+
+/* Container */
+.App {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+
+.AppContent{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  grid-column:2/3;
+}
+
+@media only screen and (max-width: 600px) {
+  .App{
+    grid-template-columns: 1fr 32fr 1fr;
+  }
+  .p,
+  li {
+    font-size: 2vw;
+  }
+  :root{
+    --title-font: bold 5vw 'Lato', sans-serif;
+  }
+}
+
+/* Header */
+.Header {
+  aspect-ratio:16/9;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  background-image: url(./Assets/HeaderBackground.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 130% 130%;
+
+}
+
+.HeaderTop{
+  grid-row: 1 / 2;
+  grid-column: 2/ 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.HeaderLeft {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+
+}
+.HeaderImage {
+  aspect-ratio: 1/1;
+  width:70%;
+  border-radius: 300px;
+}
+
+.HeaderRight {
+  grid-row:2 / 3;
+  grid-column: 2 / 3;
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.HeaderTitle {
+  margin-block-end: 0em;
+  margin-block-start:.5em;
+  font: var(--title-font);
+}
+/* Switch */
+.Switch {
+  --switch-width:12vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: var(--switch-width);
+  padding: 10px;
+  border-radius: var(--border-radius);
+  border: none;
+  background-size: 400%;
+  background-image: url(./Assets/CardBackgroundComic.png);
+  margin-top:1vw;
+  margin-bottom: 1vw;
+  transition: all  100ms ease;
+}
+
+.Switch:hover{
+  width: 14vw;
+  margin-top:.5vw;
+  margin-bottom:.5vw;
+  border-radius:3.5vw;
+}
+.SwitchChild1 {
+  grid-column: 1 / 2;
+  grid-row: 1/2;
+  z-index: 2;
+  height:80%;
+  /* -webkit-mask: url(./Assets/GearIcon.svg) no-repeat center;
+  mask: url(./Assets/GearIcon.svg) no-repeat center;
+  mask-size: 80%; */
+}
+
+.SwitchChild2 {
+  grid-column: 2 / 3;
+  grid-row: 1/2;
+  z-index: 2;
+}
+
+.SwitchChild1,
+.SwitchChild2{
+  padding: 10%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Gear,
+.Everything{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SwitchLever {
+  grid-column: 1 / 3;
+  grid-row: 1/2;
+  z-index: 1;
+  background-color: var(--blue);
+  height: 100%;
+  width: 50%;
+  transition: transform var(--speed) ease;
+  border-radius: var(--border-radius);
+}
+
+/* Cards */
+.CardStack {
+  width: 100%;
+  margin-bottom:80%;
+  transition: transform 750ms ease;
+}
+
+.CBBamboo,
+.CBPoka,
+.CBWaves,
+.CBComic,
+.CBHatch {
+  transition: all var(--speed) ease;
+  background-color: none;
+  overflow: hidden;
+  padding: 3vw;
+  margin-top: 2vw;
+  border-radius: var(--border-radius);
+}
+
+
+
+.CBBamboo{
+  background-size: 100%;
+  background-image: url(./Assets/CardBackgroundBamboo.png);
+}
+
+.CBPoka{
+  background-size: 120%;
+  background-image: url(./Assets/CardBackgroundPokaDots.png);
+}
+
+.CBWaves {
+  background-size: 100%;
+  background-image: url(./Assets/CardBackgroundWaves.png);
+}
+
+.CBHatch{
+  background-size: 50%;
+  background-image: url(./Assets/CardBackgroundHatch.png);
+}
+
+.CBComic{
+  background-size: 80%;
+  background-image: url(./Assets/CardBackgroundComic.png);
+}
+
+.CTop,
+.CMiddle {
+  display: flex;
+  flex-direction:row;
+}
+
+.CTitle{
+  flex: 1;
+}
+
+.CMiddle{
+  margin:1vw 0vw 1vw 0vw;
+}
+.CImage{
+  width:30%;
+  padding-right:3vw;
+}
+.CButton{
+  background-color: var(--blue);
+  color: white;
+  border-radius: 1vw;
+  border:none;
+  padding: .5rem;
+  margin-top: .25rem;
+  margin-bottom: .5rem;
+  transition: all  100ms ease;
+}
+
+.CButton:hover{
+  margin-top: 0rem;
+  padding:1rem;
+  border-radius:1.5vw;
+}
+.CButton>p{
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+/* Icon Bar */
+
+.IBContainer {
+  display: flex;
+}
+
+.IBItem {
+  width: 3vw;
+  height: 3vw;
+  padding: .5vw;
+  transition: all  100ms ease;
+}
+
+
+.IBItem:focus,
+.IBItem:hover {
+  width: 4vw;
+  height: 4vw;
+  padding: 0vw;
+}
+
+/* Video and Image */
+.VideoContainer{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4vw 2vw 4vw 2vw;
+  text-align: center;
+}
+
+.Video{
+  width:80%;
+  aspect-ratio: 16/9;
+}
+
+.PictureContainer{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4vw 2vw 4vw 2vw;
+  text-align: center;
+}
+
+.Picture{
+  border-radius: 3vw;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar{
+  width: 2vh;
+}
+
+::-webkit-scrollbar-track{
+  background: rgb(242, 250, 255);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: .5vh;
+}
+
