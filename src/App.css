@@ -228,10 +228,9 @@ p a:hover {
   background-image: url(./Assets/CardBackgroundComic.png);
 }
 
-.CTop,
-.CMiddle {
-  display: flex;
-  flex-direction:row;
+.CTop {
+  display:flex;
+  flex-direction: row;
 }
 
 .CTitle{
@@ -240,10 +239,24 @@ p a:hover {
 
 .CMiddle{
   margin:1vw 0vw 1vw 0vw;
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  grid-template-rows: 1fr;
+  width: 100%;
 }
 .CImage{
-  width:30%;
+  grid-column:1/2;
+  grid-row:1/2;
   padding-right:3vw;
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.CMiddleLeft{
+  grid-column:2/3;
+  grid-row:1/2;
+  padding-left:3vw;
 }
 .CButton{
   background-color: var(--blue);

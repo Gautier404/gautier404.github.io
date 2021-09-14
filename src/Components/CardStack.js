@@ -55,9 +55,9 @@ function Card(props){
           <IconBar links = {card.links}></IconBar>
         </div>
         <div className = "CMiddle">
-          <img className = "CImage" src = {card.image} alt = "project"/>
-          <div>
-            <p style = {{fontSize:"2vh"}}>{card.date}</p>
+          <div className = "CImage"><img src = {card.image} alt = "project" style ={{width:"100%"}}/></div>
+          <div className = "CMiddleLeft" >
+            <p style = {{fontSize:"1vw"}}>{card.date}</p>
             <p>{card.summary}</p>
           </div>
         </div>
