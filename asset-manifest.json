@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/gautier404.github.io/static/css/main.976c55c6.chunk.css",
+    "main.js": "/gautier404.github.io/static/js/main.f287dea1.chunk.js",
+    "main.js.map": "/gautier404.github.io/static/js/main.f287dea1.chunk.js.map",
+    "runtime-main.js": "/gautier404.github.io/static/js/runtime-main.5c6ca7de.js",
+    "runtime-main.js.map": "/gautier404.github.io/static/js/runtime-main.5c6ca7de.js.map",
+    "static/js/2.d6073c96.chunk.js": "/gautier404.github.io/static/js/2.d6073c96.chunk.js",
+    "static/js/2.d6073c96.chunk.js.map": "/gautier404.github.io/static/js/2.d6073c96.chunk.js.map",
+    "static/js/3.ecb90a5b.chunk.js": "/gautier404.github.io/static/js/3.ecb90a5b.chunk.js",
+    "static/js/3.ecb90a5b.chunk.js.map": "/gautier404.github.io/static/js/3.ecb90a5b.chunk.js.map",
+    "index.html": "/gautier404.github.io/index.html",
+    "static/css/main.976c55c6.chunk.css.map": "/gautier404.github.io/static/css/main.976c55c6.chunk.css.map",
+    "static/js/2.d6073c96.chunk.js.LICENSE.txt": "/gautier404.github.io/static/js/2.d6073c96.chunk.js.LICENSE.txt",
+    "static/media/AnimadeEasy.f6825b10.png": "/gautier404.github.io/static/media/AnimadeEasy.f6825b10.png",
+    "static/media/AppflowTasteBuds.96aeb337.png": "/gautier404.github.io/static/media/AppflowTasteBuds.96aeb337.png",
+    "static/media/App.css": "/gautier404.github.io/static/media/HeaderBackground.001a133c.svg",
+    "static/media/Cynotypes.6fda5365.jpg": "/gautier404.github.io/static/media/Cynotypes.6fda5365.jpg",
+    "static/media/DevpostLogo.6a91d01e.svg": "/gautier404.github.io/static/media/DevpostLogo.6a91d01e.svg",
+    "static/media/FigmaLogo.085ebcfc.svg": "/gautier404.github.io/static/media/FigmaLogo.085ebcfc.svg",
+    "static/media/Flange.5b1af04b.png": "/gautier404.github.io/static/media/Flange.5b1af04b.png",
+    "static/media/GithubLogo.98a1493f.svg": "/gautier404.github.io/static/media/GithubLogo.98a1493f.svg",
+    "static/media/Jamalam.70f3610b.PNG": "/gautier404.github.io/static/media/Jamalam.70f3610b.PNG",
+    "static/media/LinkedInLogo.31474d15.svg": "/gautier404.github.io/static/media/LinkedInLogo.31474d15.svg",
+    "static/media/Mask GroupThisWebsite.c5e6be52.png": "/gautier404.github.io/static/media/Mask GroupThisWebsite.c5e6be52.png",
+    "static/media/Me.1e82a857.jpg": "/gautier404.github.io/static/media/Me.1e82a857.jpg",
+    "static/media/NotJamalam.e3937b36.PNG": "/gautier404.github.io/static/media/NotJamalam.e3937b36.PNG",
+    "static/media/Synth.69f19681.png": "/gautier404.github.io/static/media/Synth.69f19681.png",
+    "static/media/TasteBuds.eacb32dd.svg": "/gautier404.github.io/static/media/TasteBuds.eacb32dd.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5c6ca7de.js",
+    "static/js/2.d6073c96.chunk.js",
+    "static/css/main.976c55c6.chunk.css",
+    "static/js/main.f287dea1.chunk.js"
+  ]
+}
