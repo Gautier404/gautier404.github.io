@@ -1,0 +1,22 @@
+@import './Constants.css';
+
+.IBContainer {
+    display: flex;
+  }
+  
+  .IBItem {
+    width: 12vw;
+    height: 12vw;
+    padding: 1vw;
+    transition: all  100ms ease;
+  }
+  
+  
+  .IBItem:focus,
+  .IBItem:hover,
+  .IBItem:active {
+    width: 10vw;
+    height: 10vw;
+    
+    padding: 2vw;
+  }

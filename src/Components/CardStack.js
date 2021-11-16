@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import {cards} from './ProjectInfo.js'
 import { CSSTransition } from 'react-transition-group';
-import FlipMove from 'react-flip-move';
+import '../Styles/CardStack.css';
+import '../Styles/Card.css';
+//import FlipMove from 'react-flip-move';
 import {IconBar} from './IconBar'
 
 
@@ -16,13 +18,13 @@ export function CardStack(props){
     //conditionally render each list depending on which way the switch is
     return (
       //FlipMove used to animate the card switching order
-      <FlipMove className = "CardStack"> 
+      <div className = "CardStack"> 
         {
           props.status ? 
           mPriorityList.map((item, index)=>{return <div key = {cards[item].title}><Card cardIndex = {item}  orderIndex = {index} expanded = {expanded} setter = {setExpanded}/></div>}):
           priorityList.map((item, index)=>{return <div key = {cards[item].title}><Card cardIndex = {item}  orderIndex = {index} expanded = {expanded} setter = {setExpanded}/></div>}) 
         }
-      </FlipMove> 
+      </div> 
     )
   }
 
@@ -40,16 +42,16 @@ function Card(props){
   }
     
     return(
-      <div style = {{height:cardHeight, transition: "height var(--speed) ease", paddingBottom: onetime? "1vw": "0vw"}} className = {backgrounds[props.orderIndex % backgrounds.length]}>
+      <div /*style = {{height:cardHeight, transition: "height var(--speed) ease", paddingBottom: onetime? "1vw": "0vw"}}*/ 
+        className = {`Card ${backgrounds[props.orderIndex % backgrounds.length]}`} >
       {/* CSS Transition used for the the animation of expansion and contraction of the card */}
-      <CSSTransition 
+      {/* <CSSTransition 
         in={props.expanded[props.cardIndex]}
         timeout={0}
         classNames="Card"
         onEnter={calcHeight}
         onExit={calcHeight}
-      >
-      <div>
+      > */}
         <div className = "CTop">
           <h1 className = "CTitle">{card.title}</h1>
           <IconBar links = {card.links}></IconBar>
@@ -74,8 +76,7 @@ function Card(props){
             }}>
           <p>{props.expanded[props.cardIndex]? "Boop for less :>" : "Boop for more >:D"}</p>
           </button>
-      </div>
-      </CSSTransition>
+      {/* </CSSTransition> */}
       </div>
     )
   }

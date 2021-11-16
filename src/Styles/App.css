@@ -1,0 +1,58 @@
+@import './Constants.css';
+
+/* Standard font style */
+p,
+li,
+button {
+    font: 4vw 'Raleway', sans-serif;
+}
+
+h1 {
+  font: bold 6vw 'Lato', sans-serif;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+h2 {
+  font: bold 5vw 'Lato', sans-serif;
+  padding-top:2vw;
+
+}
+
+p a {
+  color: black;
+  transition: all  var(--speed) ease;
+}
+
+p a:hover {
+  color: white;
+  background-color:var(--blue);
+}
+
+
+.App{
+    display: grid;
+    grid-template-columns: 1fr 12fr 1fr;
+}
+
+.AppContent{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-column:2/3;
+}
+
+
+/* Scrollbar */
+::-webkit-scrollbar{
+    width: 2vh;
+  }
+  
+  ::-webkit-scrollbar-track{
+    background: rgb(242, 250, 255);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: .5vh;
+  }
+  

@@ -1,7 +1,7 @@
-import './App.css';
+import './Styles/App.css';
 import React, { useState} from 'react';
 import {CardStack} from './Components/CardStack'
-import {Switch} from './Components/Switch'
+//import {Switch} from './Components/Switch'
 import {Header} from './Components/Header'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <div className="AppContent">
         <Header/>
-        <Switch status = {status} setStatus = {setStatus}></Switch>
+        {/* <Switch status = {status} setStatus = {setStatus}></Switch> */}
         <CardStack status = {status}></CardStack>
         </div>
     </div>
@@ -19,6 +19,7 @@ function App() {
 }
 
 export default App;
+
 
 
 

@@ -1,0 +1,16 @@
+@import './Constants.css';
+
+
+.VideoContainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4vw 2vw 4vw 2vw;
+    text-align: center;
+  }
+  
+.Video{
+    width:80%;
+    aspect-ratio: 16/9;
+  }

@@ -1,7 +1,7 @@
 import React from 'react';
 import face from '../Assets/Me.jpg'
 import {IconBar} from './IconBar'
-
+import '../Styles/Header.css';
 //Component for the top of the website with my picture and name
 export function Header(props) {
     //Links for the icon bar
@@ -11,18 +11,18 @@ export function Header(props) {
         };
     return (
         <div className = "Header">
-            <div className = "HeaderTop">
+            <div className = "HeaderIconBar">
                 <IconBar links = {Links}/>
             </div>
-            <div className = "HeaderLeft">
+            <div className = "HeaderImageContainer">
                 <img className = "HeaderImage" src ={face} alt = "Drew Gautier"></img>
             </div>
-            <div className = "HeaderRight">
+            <div className = "HeaderTextContainer">
                 <p className = "HeaderTitle"> 
                     Hello, my name is Drew
                 </p>
                 <p>
-                    and this is a website I created to showcase the projects I work on! Toggle the switch bellow to sort things between what I think is the most related to mechanical engineering or what I think is most cool.
+                    and this is a website I created to showcase the projects I work on!
                 </p>
             </div>
         </div>

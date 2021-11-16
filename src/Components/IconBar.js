@@ -3,6 +3,7 @@ import gitHubLogo from '../Assets/GithubLogo.svg'
 import linkedInLogo from '../Assets/LinkedInLogo.svg'
 import devpostLogo from '../Assets/DevpostLogo.svg'
 import figmaLogo from '../Assets/FigmaLogo.svg'
+import '../Styles/IconBar.css';
 
 //React component that will create a little bar of icons that are linked too different sites. takes an object of keys to sites and links
 export function IconBar(props) {

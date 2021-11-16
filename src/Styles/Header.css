@@ -1,0 +1,38 @@
+@import './Constants.css';
+
+.Header{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 3fr;
+    padding-top:4vw;
+}
+
+.HeaderIconBar{
+    grid-row:1/2;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.HeaderImageContainer{
+    grid-row:2/3;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HeaderImage{
+    border-radius: 100%;
+    width:40vw;
+    height:40vw;
+}
+
+.HeaderTextContainer{
+    grid-row:3/4;
+}
+
+.HeaderTitle{
+    font: bold 8vw 'Lato', sans-serif;
+    margin-block-end: .5em;
+}

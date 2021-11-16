@@ -1,0 +1,44 @@
+@import './Constants.css';
+
+.Card {
+  transition: all var(--speed) ease;
+  background-color: none;
+  overflow: hidden;
+  margin-top: 10vw;
+}
+
+
+.CTop {
+    display:flex;
+    flex-direction: row;
+}
+  
+.CTitle{
+    flex: 1;
+}
+
+
+.CButton{
+    background-color: var(--blue);
+    color: white;
+    border-radius: 2vw;
+    border:none;
+    height: 8vw;
+    width: 40vw;
+    transition: all  100ms ease;
+    margin:1vw;
+}
+  
+.CButton:hover,
+.CButton:active,
+.CButton:focus{
+    height: 10vw;
+    width: 42vw;
+    margin-top: 0vw;
+    margin:0vw;
+}
+
+.CButton>p{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}

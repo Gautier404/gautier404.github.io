@@ -45,7 +45,7 @@ export let cards = [
         },
         image: TasteBuds,
         date: "September 9th 2021",
-        summary:"Some of the friends I made at UCLA are really into hackathons, so they asked me to join their team for LA Hacks 2021. We chose the weeklong track and created an app and RFID scanner that improves the existing UCLA dining hall swipe system. I was the UI/UX designer, but I ended up spending most of my time styling and using expo to develop the frontend of the app.",
+        summary:"I created the design and did the styling for this hackathon project I made with some of my friends.",
         content: 
             <div>
                 <h2>What We Built</h2>
@@ -71,7 +71,7 @@ export let cards = [
         links: {
             github: "https://github.com/Gautier404/cigar-box-synth",
         },
-        summary:"During the pandemic I ended up working with plenty of electronics and code because electronic parts are cheap and all you need to code is a computer. Winter my freshman year I built a simple synthesizer for ASME’s Fabrication and Design Essentials program. It used an Arduino to detect the position of my hand on a membrane potentiometer to generate a tone and several potentiometers to modify the tone’s properties. It’s been my favorite project so far and I ended learning a lot about electronics and signal processing.",
+        summary:"During the pandemic I built a membrane potentiometer synth with some cool software and hardware filters.",
         date:"September 13th 2021",
         image:Synth,
         content: 
@@ -108,7 +108,7 @@ export let cards = [
             devpost: "https://devpost.com/software/animade-easy",
             figma: "https://www.figma.com/file/vkMPhKmJ1m4u2EcQZQwR0P/NOtJAMALAM?node-id=0%3A1"
         },
-        summary:"Animade Easy is a devtools extension that makes creating custom CSS animations super easy. I created it with some friends PennApps Fall 2021. I designed the UI and helped build the front end in React with Typescript. This is my favorite hackathon project because it’s a tool I would use and it was challenging but not impossible for us to create.",
+        summary:"Animade Easy is a devtools extension I created with friends during Penn Apps 2021 that makes creating custom CSS animations super easy.",
         image: Animade,
         date:"September 13th 2021",
         content: 
