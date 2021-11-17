@@ -53,3 +53,4 @@ wooo time to make website mobile friendly. Revamped CSS and removed animation fe
 
 11/16/2021
 Styled for like 3 hours. I think I'm finally done. I want to add some cynotyping stuff but I'll get this working build up first.
+Replaced last profile photo with cowboy profile photo as per my roomates request.
