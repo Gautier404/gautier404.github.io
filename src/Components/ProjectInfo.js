@@ -11,6 +11,23 @@ import Animade from '../Assets/AnimadeEasy.png'
 import Synth from '../Assets/Synth.png'
 import Flange from '../Assets/Flange.png'
 import SynthCad from '../Assets/SynthCad.PNG'
+import CyanoHeader from '../Assets/Cyano/CyanoHeader.png'
+import Cyano1 from '../Assets/Cyano/Cyano1.jpg'
+import Cyano2 from '../Assets/Cyano/Cyano2.jpg'
+import Cyano3 from '../Assets/Cyano/Cyano3.jpg'
+import Cyano4 from '../Assets/Cyano/Cyano4.jpg'
+import Cyano5 from '../Assets/Cyano/Cyano5.jpg'
+import Cyano5_5 from '../Assets/Cyano/Cyano5.5.jpg'
+import Cyano6 from '../Assets/Cyano/Cyano6.jpg'
+import Cyano7 from '../Assets/Cyano/Cyano7.jpg'
+import Cyano8 from '../Assets/Cyano/Cyano8.jpg'
+import Cyano9 from '../Assets/Cyano/Cyano9.jpg'
+import Cyano10 from '../Assets/Cyano/Cyano10.jpg'
+import Cyano11 from '../Assets/Cyano/Cyano11.jpg'
+import Cyano12 from '../Assets/Cyano/Cyano12.jpg'
+import Cyano13 from '../Assets/Cyano/Cyano13.jpg'
+import Cyano14 from '../Assets/Cyano/Cyano14.jpg'
+import Cyano15 from '../Assets/Cyano/Cyano15.jpg'
 
 //Object that contains all the content for the projects.
 //priority the higher the number the higher on the page it is
@@ -166,6 +183,35 @@ export let cards = [
             <div>
                 <h2>I told you, coming soon >:(</h2>
             </div>,
+    },
+    {   
+        title:"Cyanotype Print Gallery",
+        priority: 4,
+        mPriority: 2,
+        links: {
+            },
+        image: CyanoHeader,
+        summary:"My art",
+        content: 
+            <div>
+                <Picture link = {Cyano1} description = "" height = "20vw"></Picture>
+                <Picture link = {Cyano2} description = "" height = "20vw"></Picture>
+                <Picture link = {Cyano3} description = "" height = "20vw"></Picture>
+                <Picture link = {Cyano4} description = "" height = "20vw"></Picture>
+                <Picture link = {Cyano5} description = "" height = "20vw"></Picture>
+                <Picture link = {Cyano5_5} description = "" height = "20vw"></Picture>
+                <Picture link = {Cyano6} description = "" height = "20vw"></Picture>
+                <Picture link = {Cyano7} description = "" height = "20vw"></Picture>
+                <Picture link = {Cyano8} description = "" height = "20vw"></Picture>
+                <Picture link = {Cyano9} description = "" height = "20vw"></Picture>
+                <Picture link = {Cyano10} description = "" height = "20vw"></Picture>
+                <Picture link = {Cyano11} description = "" height = "20vw"></Picture>
+                <Picture link = {Cyano12} description = "" height = "20vw"></Picture>
+                <Picture link = {Cyano13} description = "" height = "20vw"></Picture>
+                <Picture link = {Cyano14} description = "" height = "20vw"></Picture>
+                <Picture link = {Cyano15} description = "" height = "20vw"></Picture>
+
+            </div>
     },
 ]
     
