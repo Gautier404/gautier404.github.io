@@ -1,22 +1,43 @@
 @import './Constants.css';
 
+/* ----------------- */
+/*       Mobile      */
+/* ----------------- */
+
 .Card {
   transition: all var(--speed) ease;
-  background-color: none;
+  background-color: var(--bg-accent);
   overflow: hidden;
-  margin-top: 10vw;
+  margin-top: 4vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--border-radius);
+  padding: 4vw;
 }
 
 
 .CTop {
+    width:100%;
     display:flex;
     flex-direction: row;
+    align-items: center;
+    margin-bottom: 3vw;
 }
   
 .CTitle{
     flex: 1;
 }
 
+.CImageContainer{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 3vw;
+}
+
+.CImage{
+    width:50%;
+}
 
 .CButton{
     background-color: var(--blue);
@@ -25,7 +46,7 @@
     border:none;
     height: 8vw;
     width: 40vw;
-    transition: all  100ms ease;
+    transition: all  80ms ease;
     margin:1vw;
 }
   
@@ -41,4 +62,77 @@
 .CButton>p{
     margin-block-start: 0em;
     margin-block-end: 0em;
+}
+
+/* ----------------- */
+/*       Desktop     */
+/* ----------------- */
+
+@media only screen and (min-width: 800px) {
+    .CBBamboo{
+        background-size: 100%;
+        background-image: url(../Assets/CardBackgroundBamboo.png);
+      }
+      
+      .CBPoka{
+        background-size: 120%;
+        background-image: url(../Assets/CardBackgroundPokaDots.png);
+      }
+      
+      .CBWaves {
+        background-size: 100%;
+        background-image: url(../Assets/CardBackgroundWaves.png);
+      }
+      
+      .CBHatch{
+        background-size: 50%;
+        background-image: url(../Assets/CardBackgroundHatch.png);
+      }
+      
+      .CBComic{
+        background-size: 80%;
+        background-image: url(../Assets/CardBackgroundComic.png);
+      }
+      .CMiddle{
+          display:grid;
+          grid-template-columns: 1fr 2fr;
+      }
+
+      .CImageContainer{
+        align-items: center;
+        margin-bottom: 0vw;
+    }
+
+      .CImage{
+        width:90%;
+
+    }
+
+    .Card{
+        align-items: flex-end;
+    }
+
+    .CMiddleRight{
+        display:flex;
+        align-items: center;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        padding-left:2vw;
+        padding-right:2vw;
+    }
+
+    .CButton{
+        height: 4vw;
+        width: 20vw;
+        margin:.5vw;
+    }
+      
+    .CButton:hover,
+    .CButton:active,
+    .CButton:focus{
+        height: 5vw;
+        width: 21vw;
+        margin-top: 0vw;
+        margin:0vw;
+    }
 }

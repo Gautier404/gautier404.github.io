@@ -9,11 +9,9 @@ function App() {
   
   return (
     <div className="App">
-      <div className="AppContent">
         <Header/>
         {/* <Switch status = {status} setStatus = {setStatus}></Switch> */}
         <CardStack status = {status}></CardStack>
-        </div>
     </div>
   );
 }

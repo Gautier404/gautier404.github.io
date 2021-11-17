@@ -1,5 +1,9 @@
 @import './Constants.css';
 
+/* ----------------- */
+/*       Mobile      */
+/* ----------------- */
+
 .IBContainer {
     display: flex;
   }
@@ -20,3 +24,23 @@
     
     padding: 2vw;
   }
+
+/* ----------------- */
+/*       Desktop     */
+/* ----------------- */
+
+@media only screen and (min-width: 800px) {
+    .IBItem {
+        width: 4vw;
+        height: 4vw;
+        padding: .75vw;
+      }
+      .IBItem:focus,
+      .IBItem:hover,
+      .IBItem:active {
+        width: 5vw;
+        height: 5vw;
+        
+        padding: .25vw;
+      }
+}

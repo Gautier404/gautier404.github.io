@@ -1,6 +1,12 @@
 @import './Constants.css';
 
 .CardStack {
+    grid-column:2/5;
     width: 100%;
     margin-bottom:80%;
   }
+
+
+/* ----------------- */
+/*       Desktop     */
+/* ----------------- */

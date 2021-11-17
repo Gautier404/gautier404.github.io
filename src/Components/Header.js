@@ -22,7 +22,7 @@ export function Header(props) {
                     Hello, my name is Drew
                 </p>
                 <p>
-                    and this is a website I created to showcase the projects I work on!
+                    and this is a website I created to show my projects!
                 </p>
             </div>
         </div>

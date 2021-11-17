@@ -1,11 +1,11 @@
 :root {
     --blue:  #232370;
-    --bg-accent: #484a4d;
+    --bg-accent: #f2f7ff;
     --text-color: #dadce1;
     --nav-size: 60px;
-    --border: 1px solid #474a4d;
-    --border-radius: 3vw;
-    --speed: 500ms;
+    --border: 1px solid #232370;
+    --border-radius: 4vw;
+    --speed: 300ms;
     --page-width: 60%;
     --title-font: bold 3vw 'Lato', sans-serif;
   }

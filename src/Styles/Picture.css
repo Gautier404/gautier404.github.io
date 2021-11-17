@@ -1,6 +1,7 @@
 @import './Constants.css';
 
 .PictureContainer{
+    width:100%;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -11,6 +12,9 @@
   
 .Picture{
     border-radius: 3vw;
+    max-width:80%;
+    height: auto;
+    flex-shrink: 0;
   }
 
   
