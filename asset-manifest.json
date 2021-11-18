@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.32169c7b.chunk.css",
-    "main.js": "/static/js/main.d2f72a08.chunk.js",
-    "main.js.map": "/static/js/main.d2f72a08.chunk.js.map",
+    "main.js": "/static/js/main.798e844c.chunk.js",
+    "main.js.map": "/static/js/main.798e844c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.59d69ae4.js",
     "runtime-main.js.map": "/static/js/runtime-main.59d69ae4.js.map",
     "static/js/2.fdda10de.chunk.js": "/static/js/2.fdda10de.chunk.js",
@@ -15,6 +15,23 @@
     "static/media/AnimadeEasy.f6825b10.png": "/static/media/AnimadeEasy.f6825b10.png",
     "static/media/AppflowTasteBuds.96aeb337.png": "/static/media/AppflowTasteBuds.96aeb337.png",
     "static/media/Card.css": "/static/media/CardBackgroundWaves.c1ff6f77.png",
+    "static/media/Cyano1.8f234e72.jpg": "/static/media/Cyano1.8f234e72.jpg",
+    "static/media/Cyano10.943bbc32.jpg": "/static/media/Cyano10.943bbc32.jpg",
+    "static/media/Cyano11.886cf992.jpg": "/static/media/Cyano11.886cf992.jpg",
+    "static/media/Cyano12.3b65fdbf.jpg": "/static/media/Cyano12.3b65fdbf.jpg",
+    "static/media/Cyano13.32a0f3c1.jpg": "/static/media/Cyano13.32a0f3c1.jpg",
+    "static/media/Cyano14.0c1e9aa1.jpg": "/static/media/Cyano14.0c1e9aa1.jpg",
+    "static/media/Cyano15.50be8b27.jpg": "/static/media/Cyano15.50be8b27.jpg",
+    "static/media/Cyano2.0b7e9dac.jpg": "/static/media/Cyano2.0b7e9dac.jpg",
+    "static/media/Cyano3.86f47768.jpg": "/static/media/Cyano3.86f47768.jpg",
+    "static/media/Cyano4.4ef30ca3.jpg": "/static/media/Cyano4.4ef30ca3.jpg",
+    "static/media/Cyano5.0e77e5ae.jpg": "/static/media/Cyano5.0e77e5ae.jpg",
+    "static/media/Cyano5.5.94605076.jpg": "/static/media/Cyano5.5.94605076.jpg",
+    "static/media/Cyano6.35d8f7c7.jpg": "/static/media/Cyano6.35d8f7c7.jpg",
+    "static/media/Cyano7.72db75f3.jpg": "/static/media/Cyano7.72db75f3.jpg",
+    "static/media/Cyano8.6d7da55f.jpg": "/static/media/Cyano8.6d7da55f.jpg",
+    "static/media/Cyano9.7e99b071.jpg": "/static/media/Cyano9.7e99b071.jpg",
+    "static/media/CyanoHeader.da81a25e.png": "/static/media/CyanoHeader.da81a25e.png",
     "static/media/Cynotypes.6fda5365.jpg": "/static/media/Cynotypes.6fda5365.jpg",
     "static/media/DevpostLogo.6a91d01e.svg": "/static/media/DevpostLogo.6a91d01e.svg",
     "static/media/FigmaLogo.085ebcfc.svg": "/static/media/FigmaLogo.085ebcfc.svg",
@@ -34,6 +51,6 @@
     "static/js/runtime-main.59d69ae4.js",
     "static/js/2.fdda10de.chunk.js",
     "static/css/main.32169c7b.chunk.css",
-    "static/js/main.d2f72a08.chunk.js"
+    "static/js/main.798e844c.chunk.js"
   ]
 }
