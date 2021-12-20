@@ -1,0 +1,13 @@
+@import './Constants.css';
+
+.Gallery {
+    display:grid;
+    transition: all  80ms ease;
+}
+
+@media only screen and (min-width: 600px) {
+    .Gallery{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+

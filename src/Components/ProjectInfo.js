@@ -1,5 +1,6 @@
 import {Video} from './Video.js';
-import {Picture} from './Picture.js'
+import {Picture} from './Picture.js';
+import {Gallery} from './Gallery.js';
 
 import TasteBuds from '../Assets/TasteBuds.svg'
 import TasteBudsAppFlow from '../Assets/AppflowTasteBuds.png'
@@ -12,6 +13,9 @@ import Synth from '../Assets/Synth.png'
 import Flange from '../Assets/Flange.png'
 import SynthCad from '../Assets/SynthCad.PNG'
 import CyanoHeader from '../Assets/Cyano/CyanoHeader.png'
+import PoodleProfile from '../Assets/PoodleProfile.png'
+import ActuatorProfile from '../Assets/Actuator.png'
+
 import Cyano1 from '../Assets/Cyano/Cyano1.jpg'
 import Cyano2 from '../Assets/Cyano/Cyano2.jpg'
 import Cyano3 from '../Assets/Cyano/Cyano3.jpg'
@@ -28,6 +32,35 @@ import Cyano12 from '../Assets/Cyano/Cyano12.jpg'
 import Cyano13 from '../Assets/Cyano/Cyano13.jpg'
 import Cyano14 from '../Assets/Cyano/Cyano14.jpg'
 import Cyano15 from '../Assets/Cyano/Cyano15.jpg'
+
+import Poodle from '../Assets/3DPrints/Poodle.jpg';
+import ClosetHook from '../Assets/3DPrints/ClosetHook.jpg';
+import BedHook from '../Assets/3DPrints/BedHook.jpg';
+
+let CyanotypeGallery = [
+    {link: Cyano1, description: "My first two prints made using plants from my backyard."},
+    {link: Cyano2, description: "An experiment using cut paper to block out light."},
+    {link: Cyano3, description: "Cat and moon from cut paper."},
+    {link: Cyano4, description: "Another fern print with a pretty blue color from the long exposure time."},
+    {link: Cyano5, description: "My cat Kel."},
+    {link: Cyano5_5, description: "Kel on actual Kel."},
+    {link: Cyano6, description: "Boy in Bathtub made using vinyl paper."},
+    {link: Cyano7, description: "Bert the frog wizard"},
+    {link: Cyano8, description: "Bert & his friend Kurt on a journey"},
+    {link: Cyano9, description: "Berts intimidating grandmother"},
+    {link: Cyano10, description: "Results of a day of printing. Here you can see a vinyl negative I use to create my prints."},
+    {link: Cyano11, description: "Me and my friend from across the country. It's been a while since I've seen him."},
+    {link: Cyano12, description: "Ferrari because cars are cool."},
+    {link: Cyano13, description: "The sun."},
+    {link: Cyano14, description: "A rainbow."},
+    {link: Cyano15, description: "A very. angry. frog lion."},
+]
+
+let ThreeDPrints = [
+    {link: Poodle, description: "A balloon poodle I modelled using SOLIDWORKS to give as a gift."},
+    {link: ClosetHook, description: "A hook so I can hang up my laundry bag"},
+    {link: BedHook, description: "Hooks that fit around my bunkbed to hang up my school bag and sweaters."}
+]
 
 //Object that contains all the content for the projects.
 //priority the higher the number the higher on the page it is
@@ -84,7 +117,7 @@ export let cards = [
     {   
         title:"Synthesizer",
         priority: 4,
-        mPriority: 4,
+        mPriority: 5,
         links: {
             github: "https://github.com/Gautier404/cigar-box-synth",
         },
@@ -148,13 +181,13 @@ export let cards = [
     {   
         title:"This Website!",
         priority: 5,
-        mPriority: 3,
+        mPriority: 4,
         links: {
             github: "https://github.com/Gautier404/ProjectPortfolio",
         },
         image:ThisWebsite,
         date:"September 13th 2021",
-        summary:"I spent a good amount of time making this so of course I’m going to include it! ",
+        summary:"I spent a lot of time building this website so of course I have to include it!",
         content: 
             <div>
                 <h2>But why though?</h2>
@@ -185,32 +218,61 @@ export let cards = [
             </div>,
     },
     {   
-        title:"Cyanotype Print Gallery",
+        title:"Print Gallery",
         priority: 4,
         mPriority: 2,
         links: {
             },
         image: CyanoHeader,
-        summary:"My art",
+        summary:"Outside of engineering I like to create prints. Here are some of them and a little explanation of how I make them!",
         content: 
             <div>
-                <Picture link = {Cyano1} description = "" height = "20vw"></Picture>
-                <Picture link = {Cyano2} description = "" height = "20vw"></Picture>
-                <Picture link = {Cyano3} description = "" height = "20vw"></Picture>
-                <Picture link = {Cyano4} description = "" height = "20vw"></Picture>
-                <Picture link = {Cyano5} description = "" height = "20vw"></Picture>
-                <Picture link = {Cyano5_5} description = "" height = "20vw"></Picture>
-                <Picture link = {Cyano6} description = "" height = "20vw"></Picture>
-                <Picture link = {Cyano7} description = "" height = "20vw"></Picture>
-                <Picture link = {Cyano8} description = "" height = "20vw"></Picture>
-                <Picture link = {Cyano9} description = "" height = "20vw"></Picture>
-                <Picture link = {Cyano10} description = "" height = "20vw"></Picture>
-                <Picture link = {Cyano11} description = "" height = "20vw"></Picture>
-                <Picture link = {Cyano12} description = "" height = "20vw"></Picture>
-                <Picture link = {Cyano13} description = "" height = "20vw"></Picture>
-                <Picture link = {Cyano14} description = "" height = "20vw"></Picture>
-                <Picture link = {Cyano15} description = "" height = "20vw"></Picture>
-
+                <h2>How I make them</h2>
+                <p>Cyanotyping is a form of printing which uses a chemical reaction to form the pigment Prussian blue. I begin making my cyanotypes by creating a 200 mL solution of 36 grams Ferric Ammonium Citrate and 20 grams Potassium Ferricyanide. This must be done in the dark because the chemicals will start to react in sunlight. I then paint the solution onto the material I want to print on. Most of the time I use watercolor paper but one time I printed on a shirt. Next, I make my negatives. When I first began printing I used plants from my backyard but recently I create designs digitally and print them onto translucent vinyl paper. I create a sandwich of glass, the negative, the printing material, and something rigid on and expose the print to the sun. It takes about 8 minutes of exposure for vinyl negatives and 25 minutes for plants. When photons in the UV spectrum from the sun hit the Ferric Ammonium Citrate a reaction occurs which allows Iron to combine with the Potassium Ferricyanide to form Prussian Blue. But because the chemicals are trapped in the fibers of the paper I need to develop the print in water so they are able to react with each Then all I have to do is let my print dry!</p>
+                <h2>The Gallery</h2>
+                <p>I first learned about cyanotypes by watching a Nile Red video where he synthesized the components of Prussian Blue, the pigment in cyanotypes, from scratch. I found the process of making cyanotypes fascinating and I planned on trying to make my own for my AP chemistry final project at the end of Senior Year. But because of the pandemic that never ended up happening. The following year I started researching printing methods to procrastinate studying for my spring quarter finals. I ended up ordering the chemicals to arrive as soon as school was out. This is what I made.
+                </p>
+                <Gallery galleryItems = {CyanotypeGallery}></Gallery>
+            </div>
+    },
+    {   
+        title:"Actuator Controls System",
+        priority: 0,
+        mPriority: 6,
+        links: {
+            github: "https://github.com/Bruin-Racing-Baja/MOAT",
+            },
+        image: CyanoHeader,
+        summary:"I am currently implementing the controls system for a dune buggy's electric continuously vairiable transmission",
+        content: 
+            <div>
+                
+            </div>
+    },
+    {   
+        title:"My 3D Prints",
+        priority: 0,
+        mPriority: 3,
+        links: {
+            },
+        image: PoodleProfile,
+        summary:"The bits and bobs I print at UCLA's makerspace.",
+        content: 
+            <div>
+                <Gallery galleryItems = {ThreeDPrints}></Gallery>
+            </div>
+    },
+    {   
+        title:"The Kareoketron 9000",
+        priority: 0,
+        mPriority: 4.5,
+        links: {
+            github: "https://github.com/Gautier404/kareoke",
+            },
+        image: CyanoHeader,
+        summary:"A simple sound player and listener I created for Physics Lab Fall Sophomore year.",
+        content: 
+            <div>
             </div>
     },
 ]

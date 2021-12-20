@@ -54,3 +54,14 @@ wooo time to make website mobile friendly. Revamped CSS and removed animation fe
 11/16/2021
 Styled for like 3 hours. I think I'm finally done. I want to add some cynotyping stuff but I'll get this working build up first.
 Replaced last profile photo with cowboy profile photo as per my roomates request.
+
+12/2/2021
+Want to add nice gallary looking thing for prints
+Want to add 4BL project
+Want to add actuator stuff
+
+12/16/2021
+Working on gallery component while on the airplane
+
+12/19/2021
+Finished The Cyanotype writup. Uploading pictures to the 3D printing page. In the future I want to improve the gallery to have download links to the step or solidworks files.

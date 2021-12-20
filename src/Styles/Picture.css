@@ -11,7 +11,7 @@
   }
   
 .Picture{
-    border-radius: 3vw;
+    border-radius: 1vw;
     max-width:80%;
     height: auto;
     flex-shrink: 0;
