@@ -15,6 +15,9 @@ import SynthCad from '../Assets/SynthCad.PNG'
 import CyanoHeader from '../Assets/Cyano/CyanoHeader.png'
 import PoodleProfile from '../Assets/PoodleProfile.png'
 import ActuatorProfile from '../Assets/Actuator.png'
+import KareokeSchematic from '../Assets/KareokeSchematic.png'
+import KareokeProfile from '../Assets/KareokeProfile.png'
+//import KareokeProfile from '../Assets/blahblahblah.png'
 
 import Cyano1 from '../Assets/Cyano/Cyano1.jpg'
 import Cyano2 from '../Assets/Cyano/Cyano2.jpg'
@@ -32,6 +35,14 @@ import Cyano12 from '../Assets/Cyano/Cyano12.jpg'
 import Cyano13 from '../Assets/Cyano/Cyano13.jpg'
 import Cyano14 from '../Assets/Cyano/Cyano14.jpg'
 import Cyano15 from '../Assets/Cyano/Cyano15.jpg'
+import Cyano16 from '../Assets/Cyano/Cyano16.jpg'
+import Cyano17 from '../Assets/Cyano/Cyano17.jpg'
+import Cyano18 from '../Assets/Cyano/Cyano18.jpg'
+import Cyano19 from '../Assets/Cyano/Cyano19.jpg'
+import Cyano20 from '../Assets/Cyano/Cyano20.jpg'
+import Cyano21 from '../Assets/Cyano/Cyano21.jpg'
+import Cyano22 from '../Assets/Cyano/Cyano22.jpg'
+import Cyano23 from '../Assets/Cyano/Cyano23.jpg'
 
 import Poodle from '../Assets/3DPrints/Poodle.jpg';
 import ClosetHook from '../Assets/3DPrints/ClosetHook.jpg';
@@ -54,6 +65,14 @@ let CyanotypeGallery = [
     {link: Cyano13, description: "The sun."},
     {link: Cyano14, description: "A rainbow."},
     {link: Cyano15, description: "A very. angry. frog lion."},
+    {link: Cyano16, description: "Bulk printing for some christmas cards! It was raining during exposure which you can see reflected on the prints if you look closely."},
+    {link: Cyano17, description: "A Magic token card."},
+    {link: Cyano18, description: "A girl on a sled."},
+    {link: Cyano19, description: "Dancing beetle."},
+    {link: Cyano20, description: "Blue tiger."},
+    {link: Cyano21, description: "Ballerina."},
+    {link: Cyano22, description: "Waterfall."},
+    {link: Cyano23, description: "A beach at night."},
 ]
 
 let ThreeDPrints = [
@@ -224,7 +243,7 @@ export let cards = [
         links: {
             },
         image: CyanoHeader,
-        summary:"Outside of engineering I like to create prints. Here are some of them and a little explanation of how I make them!",
+        summary:"Outside of engineering I like to create prints. Here are some and a little explanation on how they are made!",
         content: 
             <div>
                 <h2>How I make them</h2>
@@ -235,20 +254,20 @@ export let cards = [
                 <Gallery galleryItems = {CyanotypeGallery}></Gallery>
             </div>
     },
-    {   
-        title:"Actuator Controls System",
-        priority: 0,
-        mPriority: 6,
-        links: {
-            github: "https://github.com/Bruin-Racing-Baja/MOAT",
-            },
-        image: CyanoHeader,
-        summary:"I am currently implementing the controls system for a dune buggy's electric continuously vairiable transmission",
-        content: 
-            <div>
-                
-            </div>
-    },
+    // {   
+    //     title:"Actuator Controls System",
+    //     priority: 0,
+    //     mPriority: 6,
+    //     links: {
+    //         github: "https://github.com/Bruin-Racing-Baja/MOAT",
+    //         },
+    //     image: ActuatorProfile,
+    //     summary:"I am currently implementing the controls system for a dune buggy's electric continuously variable transmission.",
+    //     content: 
+    //         <div>
+    //             <Video link="https://youtube.com/embed/OrqwldYKF2g" description ="The actuator mounted on a 3d printed test bed"></Video>
+    //         </div>
+    // },
     {   
         title:"My 3D Prints",
         priority: 0,
@@ -269,10 +288,18 @@ export let cards = [
         links: {
             github: "https://github.com/Gautier404/kareoke",
             },
-        image: CyanoHeader,
+        image: KareokeProfile,
         summary:"A simple sound player and listener I created for Physics Lab Fall Sophomore year.",
         content: 
             <div>
+                <h2>Functionality</h2>
+                <Video link="https://youtube.com/embed/kFo-WVT7Ql4" description ="Here I am using the Kareoketron 9000. Please excuse the poor singing!"></Video>
+                <p>The kareoketron 9000 tests users pitch by playing them a note then listening for the note they sing back. If the note they sing back is within one percent of the desired frequency the green led light is turned on to show they hit the correct pitch. Over the course of two seconds the Teensy 4.0 microcontroller averages together what it hears. I used the notefrequency() function from the Audio library that came with the Teensy. After the Teensy determines the average note sung, it flashes a light to show how close you were to the note overall. As you hopefully can tell from the video green is within one percent of the original note, orange is within twenty-five percent, and red is for when you completely miss the note. This process is repeated for five notes and the result of the test is printed out to the serial monitor of the computer the teensy is connected to.</p>
+                <h2>Components</h2>
+                <Picture link = {KareokeSchematic} description = "Wiring of the Kareoketron 9000" height = "20vw"></Picture>
+                <p>At the heart of the kareoketron 9000 is a teensy 4.0 microcontroller which I chose because it came with an adc and the processing power to perform the fast fourier transforms needed to pick out a note in real time. My lab also let us borrow a speaker and a microphone. I used a simple voltage divider to cut the signal in half because the adc of the teensy could only take a signal with an offset of .6V with a VPP of 1.2V while the microphone outputted a signal with an offset of 1.25V and a VPP of 2V. The slick 3D printed housing was designed and printed by my lab partner Aiden.</p>
+                <h2>Some Caveats</h2>
+                <p>One interesting thing about the human voice is that there are a lot of overtones. Sometimes the teensy would pick up on these overtones and record them into the notefrequency() function. Since I was taking the average of sound over time these miss readings of overtones would throw off the results. I ended up throwing away any datapoints that were not within 25 percent of the original note to get rid of them. This means that even if you sing the correct note an octave up or down the kareoketron 9000 will consider the note you sang incorrect. Unfortunately, we disassembled the kareoketron 9000 to return all the parts before winter break but if we were to continue development we would definitely add octave jump detection and the ability to actually sing along to music.</p>
             </div>
     },
 ]

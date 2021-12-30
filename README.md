@@ -64,4 +64,7 @@ Want to add actuator stuff
 Working on gallery component while on the airplane
 
 12/19/2021
-Finished The Cyanotype writup. Uploading pictures to the 3D printing page. In the future I want to improve the gallery to have download links to the step or solidworks files.
+Finished The Cyanotype writup. Uploading pictures to the 3D printing page. In the future I want to improve the gallery to have download links to the step or solidworks files. Started writing the Actuator page and wow I have a lot to write about.
+
+12/29/2021
+Polished up some things on the cyanotype page and wrote the kareoketron 9000 page. I want to update the website with my changes so I've commented out the incomplete actuator portion.
