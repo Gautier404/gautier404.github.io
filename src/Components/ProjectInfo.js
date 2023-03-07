@@ -55,6 +55,8 @@ import MainLayout from '../Assets/MainBoxLayout.png'
 import MainBox from '../Assets/Main Box.pdf'
 import Benchamin from '../Assets/Benchamin.jpg'
 import ECVTArt from '../Assets/ECVTArt.png'
+import TreasureTracker from '../Assets/TreasureTracker.png'
+
 let CyanotypeGallery = [
     {link: Cyano1, description: "My first two prints made using plants from my backyard."},
     {link: Cyano2, description: "An experiment using cut paper to block out light."},
@@ -178,8 +180,8 @@ export let cards = [
     },
     {   
         title:"Animade Easy",
-        priority: 3,
-        mPriority: 2,
+        priority: 1,
+        mPriority: 1,
         links: {
             github: "https://github.com/css-animations/animade-easy",
             devpost: "https://devpost.com/software/animade-easy",
@@ -327,6 +329,44 @@ export let cards = [
                 <p>One interesting thing about the human voice is that there are a lot of overtones. Sometimes the teensy would pick up on these overtones and record them into the notefrequency() function. Since I was taking the average of sound over time these miss readings of overtones would throw off the results. I ended up throwing away any datapoints that were not within 25 percent of the original note to get rid of them. This means that even if you sing the correct note an octave up or down the kareoketron 9000 will consider the note you sang incorrect. Unfortunately, we disassembled the kareoketron 9000 to return all the parts before winter break but if we were to continue development we would definitely add octave jump detection and the ability to actually sing along to music.</p>
             </div>
     },
+    {   
+    title:"Treasure Tracker",
+    date:"3-7-2023",
+    priority: 4.5,
+    mPriority: 4.5,
+    links: {
+        devpost: "https://devpost.com/software/pirate-compass",
+        github: "https://github.com/TrevorGuo/TreasureTracker",
+    },
+    image: TreasureTracker,
+    summary:"Idea Hacks 2022 First Place Winner",
+    content: 
+        <div>
+            <p>Winter Quarter was a weird time to be at UCLA. A recent covid wave had pushed classes back online and everyone had at least one close contact in isolation housing. Nevertheless, IDEA hacks, the world’s largest hardware hackathon, continued in a hybrid in person and online format. My team was composed of my two roommates on campus and two friends still at home. Here’s what we created in 36 highly caffeinated hours:</p>
+            <Video link="https://www.youtube.com/embed/J1GFBCbM9qY" description ="Our Demo Video"></Video>
+            <h2>Inspiration</h2>
+            <p>Our group of friends has had the pleasure of viewing the first three Pirates of the Caribbean movies. One of our group members was inspired by Jack Sparrow’s Compass. His compass points towards whatever Jacks wants most. While it would be hard to determine the deepest desires of one’s heart, we liked the idea of a compass that could remember and point to a location of one's choosing. </p>
+            <h2>The Tech</h2>
+            <p>The Treasure tracker uses a combination of a magnetometer and a GPS module in order to save locations and triangulate the bearing of a saved location. We only had access to a 90-degree servo, so we also printed a small reduction gear set that allowed the compass to achieve a larger range of motion. </p>
+            <h2>My Role</h2>
+            <p>My team was full of Electrical and Computer Engineers, so I ended up taking on more of the mechanical side of things. I designed and manufactured the casing for our demo compass and gave it a piracy themed paint job. I also wrote up the script for our demo video and edited it together. </p>
+        </div>
+    },
+    // {   
+    // title:"The Trials of Tonatiuh",
+    // date:"3-7-2023",
+    // priority: 1.7,
+    // mPriority: 1.7,
+    // links: {
+    //     devpost: "https://devpost.com/software/the-artifact-of-ix-boluc",
+    //     github: "https://github.com/TrevorGuo/mayanKTANE",
+    // },
+    // image: TasteBuds,
+    // summary:"Covid and a hackathon what could go wrong?",
+    // content: 
+    //     <div>
+    //     </div>
+    // },
 ]
     
     
