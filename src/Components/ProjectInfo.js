@@ -6,8 +6,8 @@ import TasteBuds from '../Assets/TasteBuds.svg'
 import TasteBudsAppFlow from '../Assets/AppflowTasteBuds.png'
 import Cyanotypes from '../Assets/Cynotypes.jpg'
 import ThisWebsite from '../Assets/Mask GroupThisWebsite.png'
-import Jamalam from '../Assets/Jamalam.png'
-import NotJamalam from '../Assets/NotJamalam.png'
+import Jamalam from '../Assets/Jamalam.PNG'
+import NotJamalam from '../Assets/NotJamalam.PNG'
 import Animade from '../Assets/AnimadeEasy.png'
 import Synth from '../Assets/Synth.png'
 import Flange from '../Assets/Flange.png'
@@ -47,7 +47,14 @@ import Cyano23 from '../Assets/Cyano/Cyano23.jpg'
 import Poodle from '../Assets/3DPrints/Poodle.jpg';
 import ClosetHook from '../Assets/3DPrints/ClosetHook.jpg';
 import BedHook from '../Assets/3DPrints/BedHook.jpg';
-
+import OdriveSchematic from '../Assets/OdriveSchematic.png'
+import OdriveLayout from '../Assets/OdriveLayout.png'
+import OdriveBox from '../Assets/Odrive Box.PDF'
+import MainSchematic from '../Assets/MainBoxSchematic.png'
+import MainLayout from '../Assets/MainBoxLayout.png'
+import MainBox from '../Assets/Main Box.pdf'
+import Benchamin from '../Assets/Benchamin.jpg'
+import ECVTArt from '../Assets/ECVTArt.png'
 let CyanotypeGallery = [
     {link: Cyano1, description: "My first two prints made using plants from my backyard."},
     {link: Cyano2, description: "An experiment using cut paper to block out light."},
@@ -89,6 +96,7 @@ let ThreeDPrints = [
 //card template:
 // {   
 //     title:"The Website You're Looking At!",
+//     date:"3-6-2023",
 //     priority: 2,
 //     mPriority: 0,
 //     links: {
@@ -223,20 +231,6 @@ export let cards = [
             </div>
     },
     {   
-        title:"ECVT Sheave Flange",
-        priority: 1,
-        mPriority: 1,
-        links: {
-        },
-        summary:"Coming soon :)",
-        date:"September 13th 2021",
-        image:Flange,
-        content: 
-            <div>
-                <h2>I told you, coming soon >:(</h2>
-            </div>,
-    },
-    {   
         title:"Print Gallery",
         priority: 4,
         mPriority: 2,
@@ -254,20 +248,51 @@ export let cards = [
                 <Gallery galleryItems = {CyanotypeGallery}></Gallery>
             </div>
     },
-    // {   
-    //     title:"Actuator Controls System",
-    //     priority: 0,
-    //     mPriority: 6,
-    //     links: {
-    //         github: "https://github.com/Bruin-Racing-Baja/MOAT",
-    //         },
-    //     image: ActuatorProfile,
-    //     summary:"I am currently implementing the controls system for a dune buggy's electric continuously variable transmission.",
-    //     content: 
-    //         <div>
-    //             <Video link="https://youtube.com/embed/OrqwldYKF2g" description ="The actuator mounted on a 3d printed test bed"></Video>
-    //         </div>
-    // },
+    {   
+        title:"ECVT Control Design",
+        date:"3-6-2023",
+        priority: 0,
+        mPriority: 6,
+        links: {
+            github: "https://github.com/Bruin-Racing-Baja/GROND",
+            },
+        image: ECVTArt,
+        summary:"How I make cars go fast!",
+        content: 
+            <div>
+                <p>Baja Bruin Racing is a club at UCLA that designs, manufactures, and races offroad buggies. We normally race at events hosted by Baja SAE against other college teams. Most teams run a mechanical continuously variable transmission, but we have converted to an electrically controlled one. I’m in charge of all the electrical components that are associated with the control of the clutch position. </p>
+                <h2>What is a Continuously Variable Transmission (CVT)?</h2>
+                <p>The purpose of a CVT is to modulate the ratio between the engine shaft and the wheels. It’s composed of two conical clutches and a belt. By squeezing the clutches, the belt travels radially up and down the clutches changing the mechanical advantage between the clutches. This can be a bit difficult to visualize, so I would recommend checking out this video which shows the shifting action.</p>
+                <Video link="https://www.youtube.com/embed/PEq5_b4LWNY" description ="A quick video about the CVT"></Video>
+                <p>A traditional Baja Car uses flyweights on ramps to apply primary clutch clamping force that increases with engine speed and a helical spring and rollers to apply a secondary clutch clamping force that increases with torque. This system must be carefully balanced and tuned in order to achieve peak engine performance. Its difficult tuning the CVT perfectly and there are always several Baja events at competition that require different engine operating characteristics. This is why we’ve researched an electrically controlled CVT. We control the primary clutch position with a lever arm and linear actuator. If you’re interested in how exactly we control the primary clutch position check out <a href = "https://baja-controls.notion.site/Drew-s-Controls-Crash-Course-647b7b7e35d54651940a18fae95379cb">this</a> write up I made for our new members about the basic control of the ECVT.</p>
+                <h2>Design Changes</h2>
+                <p>Last year I was head of all things controls and in charge of manufacturing and implementing two ECVT’s designed by my predecessors. The results were rough but the I learned a lot. Using my team and I learned we designed a new electronic system. Here is a list of the major design issues and changes.</p>
+                <h3>Physical Connection issues</h3>
+                <p>Last year we used a double stacked PCB connected via headers which combined with our box design meant that a given signal would have been hand soldered at 6 points before it exited the electronics box. We also used bullets and screw terminals on external connections which tended to fail under light stress. The double stacked PCB would sometimes vibrate so much our teensy microcontroller would become disconnected from our motor controller randomly too. </p>
+                <p>This year we’re using a single layer PCB with a 90 degree automotive connector that interfaces with the outside of the box. This reduces the number hand soldered connections and increase robustness. All external connectors are replaced by waterproof DT connectors to increase reliability. These new connectors are crimped which makes them easier to service in the field than soldered bullets.</p>
+                <h3>Noise on sensor pins</h3>
+                <p>One of our greatest challenges last year was high frequency noise on our encoders and gear tooth signals. The greatest culprit was the lack of shielding on motor wiring and electrical components. This year all of our important signals and the motor cabling are shielded. I’ve also separated electronics associated with the motor driver from input electronics, which is why there are two PCBs.</p>
+                <h3>Teensy Power cycling from serial ground loop</h3>
+                <p>During regular operation we noticed our teensy crashes and restarts every couple of seconds. I believe this is because the M22 system contained a ground loop between the motor driver and teensy and any current flowing the wrong way into the teensy could cause it to crash. This year we have the capability to power the teensy on a separate battery to cut the loop. We’re also looking into optical isolation for the CAN communication between the microcontroller and motor driver to separate high side and low side electronics.</p>
+                <h3>CAN</h3>
+                <p>CAN is a communication method and protocol commonly used in automotive applications. Its robust to noise, has a high data transmission rate, and our motor driver has a built in CAN transceiver and protocol. The M23 PCB has the capability to use CAN or Serial. </p>
+                <h3>Battery for Real Time Clock</h3>
+                <p>One thing we’ve wanted during data collection is accurate time stamps. The teensy has a real time clock that can be powered with an external coin battery. I added a mount for the battery on the M23 PCB.</p>
+                <h2>Schematic & PCB Layout</h2>
+                <p>I created these two schematics and PCBs with Arnav, the electronic subteam lead, using Altium Designer. This was the first time both of us made a PCB but the software was pretty simple to learn and we got a bunch of design help from our sister club Super Milage Vehicle. There was one small issue were I used the wrong version of ODrive layout but that’s been fixed and our new boards will be arriving shortly! </p>
+                <Picture link = {MainSchematic} description = "Main Box Schematic" height = "20vw"></Picture>
+                <Picture link = {MainLayout} description = "Main Box Layout" height = "20vw"></Picture>
+                <Picture link = {OdriveSchematic} description = "Odrive Box Schematic" height = "20vw"></Picture>
+                <Picture link = {OdriveLayout} description = "Odrive Box Layout" height = "20vw"></Picture>
+                <p>For higher definition images download <a href = {MainBox} target="_blank">this</a> pdf for the odrive box and this pdf for the main box.</p>
+                <h2>Manufacture & Testing</h2>
+                <p>I created this test bench to validate our hardware before we put it on the car. This is particularly useful because the electronics subteam normally only gets a few days to work on the car and having our designs validated lets me catch errors early. My software counterpart can develop code without an actual car. It incorporates an Analog Discovery 2 to generate the input signals and read CAN traffic and a Raspberry Pi for remote flashing of the Teensy and data collection.</p>
+                <Picture link ={Benchamin} description = "Our Test Bench" height = "20vw"></Picture>
+                <p>We’ve only found a few errors with the pcb, mostly to do with part footprints so they’re ready to go on the car! Right now we are waiting for the powertrain, transmission, and engine to be assembled on the car before we can do actual harnessing.</p>
+                <p>As a bonus here's a video of last years actuator on last years test bed!</p>
+                <Video link="https://youtube.com/embed/OrqwldYKF2g" description ="The actuator moving pack and forth"></Video>
+            </div>
+    },
     {   
         title:"My 3D Prints",
         priority: 0,
