@@ -47,6 +47,13 @@ import Cyano23 from '../Assets/Cyano/Cyano23.jpg'
 import Poodle from '../Assets/3DPrints/Poodle.jpg';
 import ClosetHook from '../Assets/3DPrints/ClosetHook.jpg';
 import BedHook from '../Assets/3DPrints/BedHook.jpg';
+import Assembled162Proj from '../Assets/3DPrints/Assembled162Proj.jpg'
+import DeskLampHolder from '../Assets/3DPrints/DeskLampHolder.jpg'
+import InjectionMoldTest from '../Assets/3DPrints/InjectionMoldTest.jpg'
+import Lamp from '../Assets/3DPrints/Lamp.jpg'
+import Print2 from '../Assets/3DPrints/Print2of162bProj.jpg'
+import Print3 from '../Assets/3DPrints/Print3of162bProj.jpg'
+
 import OdriveSchematic from '../Assets/OdriveSchematic.png'
 import OdriveLayout from '../Assets/OdriveLayout.png'
 import OdriveBox from '../Assets/Odrive Box.PDF'
@@ -85,6 +92,12 @@ let CyanotypeGallery = [
 ]
 
 let ThreeDPrints = [
+    {link: Lamp, description: "A Christmas gift for my sister I made with a python script in Blender."},
+    {link: InjectionMoldTest, description: "A test injection mold for a dinosaur coin."},
+    {link: Assembled162Proj, description: "Part of a project assembled together for my compliant mechanism class."},
+    {link: Print2, description: "Second iteration of the blocks directly from the print bed."},
+    {link: Print3, description: "Third iteration plus another flexture block."},
+    {link: DeskLampHolder, description: "An adaptor that lets me attach my lamp to my desk."},
     {link: Poodle, description: "A balloon poodle I modelled using SOLIDWORKS to give as a gift."},
     {link: ClosetHook, description: "A hook so I can hang up my laundry bag"},
     {link: BedHook, description: "Hooks that fit around my bunkbed to hang up my school bag and sweaters."}

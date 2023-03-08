@@ -71,7 +71,7 @@ function Card(props){
               props.setter(newExpanded);
               setOneTime(false);
             }}>
-          <p>{props.expanded[props.cardIndex]? "Boop for less :>" : "Boop for more >:D"}</p>
+          <p>{props.expanded[props.cardIndex]? "Read Less!" : "Read More!"}</p>
           </button>
       {/* </CSSTransition> */}
       </div>
