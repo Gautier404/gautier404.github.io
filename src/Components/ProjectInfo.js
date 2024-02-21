@@ -75,6 +75,8 @@ import SPAMFirstHello from '../Assets/SPAM_First_Hello.png'
 import SPAMGraphicDesign from '../Assets/SPAM_Graphic_Design.png'
 import SPAMHelloWorlds from '../Assets/SPAM_Hello_Worlds.png'
 
+import FlyierClub from '../Assets/FlyierClub.png'
+
 let CyanotypeGallery = [
     {link: Cyano1, description: "My first two prints made using plants from my backyard."},
     {link: Cyano2, description: "An experiment using cut paper to block out light."},
@@ -410,6 +412,22 @@ export let cards = [
                 <Picture link = {SPAMHelloWorlds} description = "Hello Worlds!" height = "20vw"></Picture>
             </div>
         },
+        {   
+            title:"Flyier Club",
+            date:"11-1-2023",
+            priority: 4.5,
+            mPriority: 2.5,
+            links: {
+                github: "https://github.com/Gautier404/Flyier-Club",
+            },
+            image: FlyierClub,
+            summary:"A dumb idea from softmore year",
+            content: 
+                <div>
+                    <p>My roomates and I thought it would be a fun idea to create a club on campus who's sole purpose was to distribute silly fliers. My roomate and I created <a href = 'https://gautier404.github.io/Flyier-Club/'>this website</a> to host the designs I made. Some of the designs are pretty fun so go check it out! This idea was later taken and made much cooler <a href = 'https://www.instagram.com/flier.club/'>by some folks at CalArts</a></p>
+                </div>
+            },
+        
     // {   
     // title:"The Trials of Tonatiuh",
     // date:"3-7-2023",
