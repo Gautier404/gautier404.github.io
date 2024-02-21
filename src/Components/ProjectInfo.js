@@ -64,6 +64,17 @@ import Benchamin from '../Assets/Benchamin.jpg'
 import ECVTArt from '../Assets/ECVTArt.png'
 import TreasureTracker from '../Assets/TreasureTracker.png'
 
+import SPAM from '../Assets/SPAM.png'
+import SPAMToolpath2D from '../Assets/SPAM_Toolpath2D.png'
+import SPAMToolpath3D from '../Assets/SPAM_Toolpath3D.png'
+import SPAMDHTable from '../Assets/SPAM_DHTable.png'
+import SPAMShakyCartesianTracking from '../Assets/SPAM_Shaky_Cartesian_Tracking.png'
+import SPAMTightCartesianTracking from '../Assets/SPAM_Tight_Cartesian_Tracking.png'
+import SPAMTightAngleTracking from '../Assets/SPAM_Tight_Angle_Tracking.png'
+import SPAMFirstHello from '../Assets/SPAM_First_Hello.png'
+import SPAMGraphicDesign from '../Assets/SPAM_Graphic_Design.png'
+import SPAMHelloWorlds from '../Assets/SPAM_Hello_Worlds.png'
+
 let CyanotypeGallery = [
     {link: Cyano1, description: "My first two prints made using plants from my backyard."},
     {link: Cyano2, description: "An experiment using cut paper to block out light."},
@@ -365,6 +376,40 @@ export let cards = [
             <p>My team was full of Electrical and Computer Engineers, so I ended up taking on more of the mechanical side of things. I designed and manufactured the casing for our demo compass and gave it a piracy themed paint job. I also wrote up the script for our demo video and edited it together. </p>
         </div>
     },
+    {   
+        title:"Control of SPAM Bot",
+        date:"12-1-2023",
+        priority: 4.5,
+        mPriority: 5.5,
+        links: {
+            github: "https://github.com/Gautier404/robowriter",
+        },
+        image: SPAM,
+        summary:"The coolest school assignment I've had at UCLA.",
+        content: 
+            <div>
+                <p>The final project of my robotics kinematics course was to construct a robot that performed some sort of task with 4+ degrees of freedom. Our group decided to create a robot that was capable of drawing standard SVG files from Illustrator. I mostly worked on designing the control code to convert a given toolpath, as described by an SVG, to a series of commands that were sent to our dynamixel USB motor controller. I spent about 30 hours working on the code because of how fun it was and I'm super happy with the final product!</p>
+                <Video link="https://www.youtube.com/embed/Kg42oVeM5DE" description ="Our Demo Video"></Video>
+                <h2>How it works</h2>
+                <p>First you choose a given SVG from illustrator or from mixtella's <a href = "https://mitxela.com/plotterfun/">plotter fun software</a>.  A parsing algorithm written in python then converts the elements within the file to a series of discretized points that we want the tip of the robot arm's sharpie to hit on the paper. </p>
+                <Picture link = {SPAMToolpath2D} description = "A 2D toolpath" height = "20vw"></Picture>
+                <Picture link = {SPAMToolpath3D} description = "A 3D toolpath with interpolation" height = "20vw"></Picture>
+                <p>We feed these points into a series of functions that convert them into a scaled 3D toolpath that fits within the robots work area and accounts for the lifting and pressing of the sharpie. Earlier we had determined the basic dimensions of the robot, derived a Denavit-Hartenberg table, and computed the forward and inverse kinematics of the robot. </p>
+                <Picture link = {SPAMDHTable} description = "Robot parameters and Denavit-Hartenberg Table" height = "20vw"></Picture>
+                <p>For those who don't know: forward kinematics take in a series of motor angles and convert them into the location of the robot tool tip in cartesian coordinates in relation to the base of the robot. Inverse kinematics take in the tooltip cartesian coordinates and convert it into motor joint angles. This was done with the help of MATLAB. Finding the kinematic relations comprised most of what had been taught to us in the course by Dr. Hong. The inverse kinematics were used to convert our cartesian toolpath into into a series of motor angles. We put these angles through the forward kinematics to generate a simulation of our robot going through the toolpath. </p>
+                <Video link="https://www.youtube.com/embed/dAau1SGesEk" description ="The simulation runs slowly in this video but in a more recent version of our code I've added some optimizations to make it smoother."></Video>
+                <p>Finally the series of angles is sent to the robot arm using a modified python driver I wrote and the dynamixel motor USB motor controller.</p>
+                <h3>PID Tuning</h3>
+                <p>During the development process we discovered that the SPAM bot was doing a poor job line following. I added a motor position logger to create the following graphs to gauge motor error. After tightening up the PID parameters of each of the motors and adding the SPAM counterweight, the line following was much better.</p>
+                <Picture link = {SPAMShakyCartesianTracking} description = "Cartesian tracking before tuning" height = "20vw"></Picture>
+                <Picture link = {SPAMTightCartesianTracking} description = "Cartesian tracking after tuning" height = "20vw"></Picture>
+                <Picture link = {SPAMTightAngleTracking} description = "Angle tracking after tuning" height = "20vw"></Picture>
+                <h2>SPAM Bot Gallery</h2>
+                <Picture link = {SPAMFirstHello} description = "The first time Bezier curves worked & a nerdy goodnight text." height = "20vw"></Picture>
+                <Picture link = {SPAMGraphicDesign} description = "SPAM Bot does graphic design???" height = "20vw"></Picture>
+                <Picture link = {SPAMHelloWorlds} description = "Hello Worlds!" height = "20vw"></Picture>
+            </div>
+        },
     // {   
     // title:"The Trials of Tonatiuh",
     // date:"3-7-2023",
