@@ -414,14 +414,14 @@ export let cards = [
         },
         {   
             title:"Flyier Club",
-            date:"11-1-2023",
+            date:"5-30-2022",
             priority: 4.5,
             mPriority: 2.5,
             links: {
                 github: "https://github.com/Gautier404/Flyier-Club",
             },
             image: FlyierClub,
-            summary:"A dumb idea from softmore year",
+            summary:"A dumb idea from sophomore year",
             content: 
                 <div>
                     <p>My roomates and I thought it would be a fun idea to create a club on campus who's sole purpose was to distribute silly fliers. My roomate and I created <a href = 'https://gautier404.github.io/Flyier-Club/'>this website</a> to host the designs I made. Some of the designs are pretty fun so go check it out! This idea was later taken and made much cooler <a href = 'https://www.instagram.com/flier.club/'>by some folks at CalArts</a></p>
