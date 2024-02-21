@@ -4,8 +4,8 @@ import '../Styles/Picture.css';
 export function Picture(props){
     return (
         <div className = "PictureContainer">
-            <p>{props.description}</p>
             <img src = {props.link} alt = {props.description}   className = "Picture"/>
+            <p>{props.description}</p>
         </div>
     )
 }

@@ -77,6 +77,15 @@ import SPAMHelloWorlds from '../Assets/SPAM_Hello_Worlds.png'
 
 import FlyierClub from '../Assets/FlyierClub.png'
 
+import DNDCAD from '../Assets/DND_CAD.png'
+import DNDDiagram from '../Assets/DND_Diagram.png'
+import DNDElectronics from '../Assets/DND_Electronics.jpg'
+import DNDFrontPage from '../Assets/DND_FrontPage.jpg'
+import DNDInternals from '../Assets/DND_Internals.jpg'
+import DNDMaskMechanism from '../Assets/DND_Mask_Mechanism.jpg'
+import DNDMaskMount from '../Assets/DND_Mask_Mount.jpg'
+import DND from '../Assets/DND.png'
+
 let CyanotypeGallery = [
     {link: Cyano1, description: "My first two prints made using plants from my backyard."},
     {link: Cyano2, description: "An experiment using cut paper to block out light."},
@@ -413,18 +422,49 @@ export let cards = [
             </div>
         },
         {   
+            title:"Bare Bones DND",
+            date:"1-15-2022",
+            priority: 4.3,
+            mPriority: 5.2,
+            links: {
+                devpost: "https://devpost.com/software/bare-bonez-dnd",
+            },
+            image: DND,
+            summary:"A robot DND dungeon master and Idea Hacks 2024 3rd place winner.",
+            content: 
+                <div>
+                    <Picture link = {DNDFrontPage} description = "The dungeon master and its DND kit" height = "20vw"></Picture>
+                    <p> Idea hacks is a 36 hour hardware hackathon hosted by the local chapter of IEEE at our school. We managed to win it all our sophomore year with a product we called Treasure Tracker (see below) but had a disappointing showing our Junior year after getting COVID halfway through and not making finals. For our final year at university, we created a robotic dungeon master using some of the AI tools that have been put out recently. It was intended to make getting into DND more accessible and fun since DMing can be a big task. It was a lot of fun and is my favorite hackathon I've done while at university. Bare Bones DND is best shown in video form. The one we took below was recorded at 6am after a long all nighter yet you can see how excited we were to play with the finished project.</p>
+                    <Video link="https://www.youtube.com/embed/EDbum2Axv7s" description ="Demo Video (I hope to put out a higher quality version in the future)"></Video>
+                    <h2>How it works</h2>
+                    <h3>Code</h3>
+                    <p>Out of everything, the code was the simplest component of this project. We used Open AI's APIs for speech to text, Chat GPT, and text to speech to convert our talking into the robots replies. There are a lot of API calls which is why the robot sometimes takes a while to think. Everything was done using python for ease of use and tested on our computers before being used on a Raspberry Pi 4. The Raspberry Pi also delt with inputs from the a recording button and the control of the skulls LED eyes and servo jaw motion.</p>
+                    <Picture link = {DNDDiagram} description = "The signal flow diagram for our robot" height = "20vw"></Picture>
+                    <h3>Electronics</h3>
+                    <p>You probably wouldn't guess that the most difficult part of our project was to get a microphone working with the Raspberry Pi. Unfortunately the Raspberry Pi doesn't come with any analogue read pins and there were no USB microphones available among the hackathon supplies. We tried using a 12 bit ADC but failed to get it to work in a reasonable amount of time. We also tried using a Teensy 4.1's ADC and sending the audio over a serial connection to the Pi 4 but that also proved to complicated given our time constraints. At the suggestion of one of the hackathon organizers, we used a PDM microphone hooked up to a Raspberry Pico emulating a USB microphone which worked after minimal debugging. </p>
+                    <p>The Raspberry Pi also didn't have any GPIO pins with DACs so I ended up sacrificing some airplane headphones to get an audio signal from the Pi's headphone jack. I also selected a class D amplifier and speaker to make our DM's voice louder. We were conveniently able to power everything off the Raspberry Pi's power supply.</p>
+                    <Picture link = {DNDElectronics} description = "Testing all the breadboarded electronic components before soldering them together and fitting them inside the enclosure." height = "20vw"></Picture>
+                    <Picture link = {DNDInternals} description = "Open enclosure of our project showing all the wiring and components. Its messy but hasn't broken after being banged around during transport and when we show it off to guests at our apartment." height = "1vw"></Picture>
+                    <h3>Enclosure and Mask</h3>
+                    <p>My main task was to create the enclosure and animatronic skull. I initially tried modeling my own skull as the entire enclosure but my proficiency at Blender proved to be too poor. I instead went with a regular box with a skull mask mounted to the front. The 3D files of a skull mask was found on Thingiverse by user BobStuntsville. I brought them into SOLIDWORKS and created a mounting plate for the skull that was 3D printed at the makerspace. The rest of the enclosure was made from laser cut acrylic. The whole thing was put together arts and crafts style with hot glue and lockwire with the aid of some 3D printed corner supports.</p>
+                    <Picture link = {DNDCAD} description = "CAD of the mask mount." height = "20vw"></Picture>
+                    <Picture link = {DNDMaskMechanism} description = "The mounted mask. You can see how the jaw is connected to the hinge via lockwire and how servo actuation moves the jaw up and down." height = "20vw"></Picture>
+                    <Picture link = {DNDMaskMount} description = "Mounting the mask." height = "20vw"></Picture>
+                </div>
+            },
+            {   
             title:"Flyier Club",
             date:"5-30-2022",
             priority: 4.5,
-            mPriority: 2.5,
+            mPriority: 2.5,                
             links: {
                 github: "https://github.com/Gautier404/Flyier-Club",
             },
             image: FlyierClub,
             summary:"A dumb idea from sophomore year",
-            content: 
+            content:
                 <div>
-                    <p>My roomates and I thought it would be a fun idea to create a club on campus who's sole purpose was to distribute silly fliers. My roomate and I created <a href = 'https://gautier404.github.io/Flyier-Club/'>this website</a> to host the designs I made. Some of the designs are pretty fun so go check it out! This idea was later taken and made much cooler <a href = 'https://www.instagram.com/flier.club/'>by some folks at CalArts</a></p>
+                    <p>My roomates and I thought it would be a fun idea to create a club on campus who's sole purpose was to distribute silly fliers. My roomate and I created <a href = 'https://gautier404.github.io/Flyier-Club/'>this website</a> to host the designs I made. Some of the designs are pretty fun so go check it out! This idea was later made much cooler <a href = 'https://www.instagram.com/flier.club/'>by some folks at CalArts</a>.</p>
                 </div>
             },
         
