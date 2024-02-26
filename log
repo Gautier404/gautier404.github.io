@@ -1,3 +1,6 @@
+2/26/2024
+Added LED Earings
+
 2/21/2024
 Added writup for the robot. Added flyier club. Added Bare Bones DND.
 
@@ -81,3 +84,8 @@ Apparently I made this 2 years ago. And its time for some updates.
     Film Photos
     162b stuff
     
+
+
+
+const int analoguepin = A2
+#define ANALOGUEPIN A2
