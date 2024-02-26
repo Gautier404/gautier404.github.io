@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.660a8c1a.css",
-    "main.js": "/static/js/main.df876b5c.js",
+    "main.js": "/static/js/main.7c2d22c9.js",
     "static/js/488.885f458f.chunk.js": "/static/js/488.885f458f.chunk.js",
     "static/media/FlyierClub.png": "/static/media/FlyierClub.e16859b966de050db68f.png",
     "static/media/Actuator.png": "/static/media/Actuator.b0bba3cf51627c72136e.png",
@@ -34,6 +34,7 @@
     "static/media/Benchamin.jpg": "/static/media/Benchamin.eeedf1aaaff2029568b9.jpg",
     "static/media/Assembled162Proj.jpg": "/static/media/Assembled162Proj.190726ca20875f691661.jpg",
     "static/media/InjectionMoldTest.jpg": "/static/media/InjectionMoldTest.c1f2e4c937c6ede350f3.jpg",
+    "static/media/Earing.png": "/static/media/Earing.eba5b8cc2758fe3e9a4a.png",
     "static/media/Me.jpg": "/static/media/Me.90a8b111086b9e49c249.jpg",
     "static/media/Odrive Box.PDF": "/static/media/Odrive Box.ddf55f84b2b3e6ebac62.PDF",
     "static/media/Cyano13.jpg": "/static/media/Cyano13.32a0f3c12450fdb5c994.jpg",
@@ -84,6 +85,9 @@
     "static/media/KareokeSchematic.png": "/static/media/KareokeSchematic.0f33b8dade3b3a9eb7fb.png",
     "static/media/SPAM_Toolpath2D.png": "/static/media/SPAM_Toolpath2D.e401bec5fe0bf2ff163e.png",
     "static/media/SPAM_Tight_Angle_Tracking.png": "/static/media/SPAM_Tight_Angle_Tracking.bc4a979af6fb017c6a63.png",
+    "static/media/Earing_Right.jpg": "/static/media/Earing_Right.aa03a2ba88241f76f12c.jpg",
+    "static/media/Earing_Left.jpg": "/static/media/Earing_Left.eed6075aea75de2886ef.jpg",
+    "static/media/Earing_Middle.jpg": "/static/media/Earing_Middle.073cf6cc50dc1235f5b2.jpg",
     "static/media/AnimadeEasy.png": "/static/media/AnimadeEasy.f6825b10cb02b614d2c7.png",
     "static/media/TasteBuds.svg": "/static/media/TasteBuds.eacb32dd9a0a714369f232cce779aa16.svg",
     "index.html": "/index.html",
@@ -92,11 +96,11 @@
     "static/media/GithubLogo.svg": "/static/media/GithubLogo.98a1493fe7a260f96be7df1d121a4fed.svg",
     "static/media/DevpostLogo.svg": "/static/media/DevpostLogo.6a91d01e323450b08065719fadb2ea12.svg",
     "main.660a8c1a.css.map": "/static/css/main.660a8c1a.css.map",
-    "main.df876b5c.js.map": "/static/js/main.df876b5c.js.map",
+    "main.7c2d22c9.js.map": "/static/js/main.7c2d22c9.js.map",
     "488.885f458f.chunk.js.map": "/static/js/488.885f458f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.660a8c1a.css",
-    "static/js/main.df876b5c.js"
+    "static/js/main.7c2d22c9.js"
   ]
 }
